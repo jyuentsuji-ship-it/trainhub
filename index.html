@@ -763,7 +763,9 @@ function openVideo(id) {
   document.getElementById('modalDesc').textContent = v.desc || '';
 
   const videoEl = document.getElementById('modalVideo');
-  if (v.source === 'drive') {
+  // URLからGoogle Driveか自動判定
+  const isDrive = v.source === 'drive' || (v.url && v.url.includes('drive.google.com'));
+  if (isDrive) {
     const did = extractDriveId(v.url);
     videoEl.innerHTML = did ? `<iframe src="https://drive.google.com/file/d/${did}/preview" allowfullscreen></iframe>`
       : `<div style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;color:var(--muted);font-size:13px">DriveリンクをPC版で全員に共有設定してください</div>`;
