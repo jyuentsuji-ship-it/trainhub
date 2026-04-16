@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>社内研修ポータル</title>
+<title>住援研修動画</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -279,8 +279,8 @@ textarea{resize:vertical;min-height:68px;line-height:1.6;}
 <!-- ===== LOGIN SCREEN ===== -->
 <div id="loginScreen">
   <div class="login-box">
-    <div class="login-logo">TRAIN<span>HUB</span></div>
-    <div class="login-subtitle">社内研修ポータル</div>
+    <div class="login-logo">住援<span>研修動画</span></div>
+    <div class="login-subtitle">住援研修動画</div>
 
     <div class="form-group">
       <span class="login-label">パスワード</span>
@@ -302,7 +302,7 @@ textarea{resize:vertical;min-height:68px;line-height:1.6;}
 <!-- ===== MAIN APP ===== -->
 <div id="app">
   <header>
-    <div class="logo">TRAIN<span>HUB</span></div>
+    <div class="logo">住援<span>研修動画</span></div>
     <div class="header-right">
       <div class="user-chip">
         <div class="user-avatar" id="avatarLabel"></div>
@@ -384,7 +384,7 @@ textarea{resize:vertical;min-height:68px;line-height:1.6;}
         </div>
         <div class="form-group">
           <label>メンバー名（カンマ区切り）</label>
-          <input type="text" id="memberNames" placeholder="例：田中,佐藤,鈴木,山田,伊藤" oninput="saveSettings()" />
+          <input type="text" id="memberNames" placeholder="例：氏家,福田,福島" oninput="saveSettings()" />
         </div>
         <button class="btn-submit" style="margin-top:0;background:linear-gradient(135deg,#2980b9,#3498db)" onclick="applySettings()">✅ 設定を反映する</button>
       </div>
@@ -492,7 +492,7 @@ const ADMIN_PASSWORD = 'admin123';
 // デフォルト設定（管理者パネルで変更可能）
 let settings = {
   password: 'train2024',
-  members: ['田中','佐藤','鈴木','山田','伊藤'],
+  members: ['氏家','福田','福島'],
   gasUrl: ''
 };
 
